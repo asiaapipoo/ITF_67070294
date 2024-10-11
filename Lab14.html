@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>ITF lab 14</title>
+</head>
+<body>
+    <div class="profile" id="profile">
+        <div class="notify">
+            <p>1</p>
+        </div>
+    </div>    
+    <h1 id="username">Username, Hi</h1>
+    <label>Set Username</label><input id="input-name" type="text"><button onclick="setName()"><i class='bx bxs-user'></i></button>
+    <label>Set Image</label><input id="input-url" type="text"><button onclick="setImg()"><i class='bx bxs-image-alt' ></i></button>
+    <input type="text">
+    <input type="text">
+    <button onclick="addRow()"><i class='bx bxs-phone' ></i></button>
+    <table id="table">
+        <tr>
+            <th>name</th>
+            <th>phone</th>
+        </tr>
+    </table>
+
+    <script>        
+        const name = document.getElementById("username");
+        const inputName = document.getElementById("input-name");
+        const profile = document.getElementById("profile");
+        const inputUrl = document.getElementById("input-url");
+        const table = document.getElementById("table");
+        
+        function setName(){
+            name.textContent = inputName.value + ", Welcome";
+            inputName.value="";
+        }
+        function setImg(){
+            profile.style.backgroundImage = "url(" + inputUrl.value + ")";
+        }
+        function addRow() {
+            const row = document.createElement("tr");
+            const cell1 = document.createElement("td");
+            const cell2 = document.createElement("td");
+            cell1.textContent = "setName()"
+            cell2.textContent = ""
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            table.appendChild(row);
+        }
+    </script>
+</body>
+</html
