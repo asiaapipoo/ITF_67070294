@@ -3,53 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>ITF lab 14</title>
+    <title>Phone Book</title>
+    <link rel="icon" type="image/x-icon" href="meme.jpg">
+    <link rel="stylesheet" type="text/css" href="styles2.css"/> 
 </head>
 <body>
-    <div class="profile" id="profile">
-        <div class="notify">
-            <p>1</p>
-        </div>
-    </div>    
-    <h1 id="username">Username, Hi</h1>
-    <label>Set Username</label><input id="input-name" type="text"><button onclick="setName()"><i class='bx bxs-user'></i></button>
-    <label>Set Image</label><input id="input-url" type="text"><button onclick="setImg()"><i class='bx bxs-image-alt' ></i></button>
-    <input type="text">
-    <input type="text">
-    <button onclick="addRow()"><i class='bx bxs-phone' ></i></button>
-    <table id="table">
+    <nav>
+        <div class="container">
+          <div class="nav-con">
+            <ul class="menu">
+              
+            </ul>
+          </div>
+        </div>  
+      </nav>
+    <h1><span class="username" id="username">Apipoo Meearj 67070294</span>'s Phones Library</h1>
+    <div class="avatar" id="avatar">
+        <div class="notification">1</div>
+    </div>
+    <div>
+        <label for="usernameInput">Set the Username</label>
+        <input type="text" id="usernameInput" placeholder="Enter Username">
+        <button onclick="setUsername()">SET</button>
+    </div>
+    <div>
+        <label for="avatarInput">Set the proflie image URL</label>
+        <input type="text" id="avatarInput" placeholder="Enter Image URL">
+        <button onclick="setAvatar()">SET</button>
+    </div>
+    <h3>Phone Number List</h3>
+    <div>
+        <input type="text" id="nameInput" placeholder="Name">
+        <input type="tel" id="phoneInput" placeholder="Tel">
+        <button onclick="addContact()">ADD</button>
+        <button onclick="exportContacts()">EXPORT</button>
+    </div>
+    <table id="contactTable">
         <tr>
-            <th>name</th>
-            <th>phone</th>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Phone Number</th>
         </tr>
     </table>
-
-    <script>        
-        const name = document.getElementById("username");
-        const inputName = document.getElementById("input-name");
-        const profile = document.getElementById("profile");
-        const inputUrl = document.getElementById("input-url");
-        const table = document.getElementById("table");
-        
-        function setName(){
-            name.textContent = inputName.value + ", Welcome";
-            inputName.value="";
-        }
-        function setImg(){
-            profile.style.backgroundImage = "url(" + inputUrl.value + ")";
-        }
-        function addRow() {
-            const row = document.createElement("tr");
-            const cell1 = document.createElement("td");
-            const cell2 = document.createElement("td");
-            cell1.textContent = "setName()"
-            cell2.textContent = ""
-            row.appendChild(cell1);
-            row.appendChild(cell2);
-            table.appendChild(row);
-        }
-    </script>
+    <footer>
+        <a href="https://www.instagram.com/aa_.ia_/"><b><u>My Contact</u></b></a>
+        <p>ITF-LAB14, Apipoo Meearj</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-</html
+</html>
