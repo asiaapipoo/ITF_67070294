@@ -10,7 +10,7 @@ html{
     background-color: red;
     padding: 10px 20px;
     column-gap: 5px;
-    justify-content: center;
+    justify-content: right;
 }
 .nav-item{
     color: whitesmoke;
@@ -48,4 +48,14 @@ footer{
     text-align: center;
     font-size: xx-large;
     font-family: monospace;
+}
+.link{
+    background-color: whitesmoke;
+    border: 0cqb;
+    color: transparent;
+    border-radius: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    padding-right: 20px;
+    
 }
